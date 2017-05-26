@@ -31,14 +31,41 @@ public class AsymmetricSymmetricDemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+
+        //encrypt file
+        /*byte[] fileToByte = Files.readAllBytes(Paths.get(ClassLoader.getSystemResource("version.properties").toURI()));
+        System.out.println(fileToByte);
+
+        Path symmetrickeyPath = Paths.get("/Users/diwenlao/IdeaProjects/asymmetric_symmetric_demo/symmetric.key");
+        byte[] secretKeyInByte = Files.readAllBytes(symmetrickeyPath);
+
+        byte[] encryptedPropertiesFile = encryptUsingSymmetricKey(fileToByte,secretKeyInByte);
+        System.out.println(encryptedPropertiesFile);
+        Files.write(Paths.get("encrypted.properties"),encryptedPropertiesFile);
+        */
+
+        //decrypt file
+        /*byte[] encryptedFileToByte = Files.readAllBytes(Paths.get(ClassLoader.getSystemResource("encrypted.properties").toURI()));
+
+        Path symmetrickeyPath = Paths.get("/Users/diwenlao/IdeaProjects/asymmetric_symmetric_demo/symmetric.key");
+        byte[] secretKeyInByte = Files.readAllBytes(symmetrickeyPath);
+        byte[] decryptedPropertiesFile = decryptUsingSymmetricKey(encryptedFileToByte, secretKeyInByte);
+
+        Files.write(Paths.get("decrypted.properties"), decryptedPropertiesFile);*/
+
+
         //generateKeyPair("another");
+
         //generatePCK1();
-        // generateAESKey("symmetric");
+
+        //generateAESKey("symmetric");
 
         //asymmetricDemo();
+
         //symmetricDemo();
 
         //asymmetric_symmetric_combo_demo();
+
     }
 
     private void asymmetric_symmetric_combo_demo() throws IOException, GeneralSecurityException {
